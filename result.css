@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+/* ==============================
+   RESET STYLING
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==============================
+   BODY STYLING
+============================== */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Light gray background for a clean look */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ==============================
+   TOP BAR STYLING
+============================== */
+.top-bar {
+    background-color: #9F4B5F; /* Elegant color for the top bar */
+    height: 56px; /* Height of the top bar */
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: center; /* Center the title horizontally */
+    align-items: center; /* Center the title vertically */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 10; /* Ensures it stays on top of other elements */
+}
+
+.top-bar h1 {
+    font-family: 'Lobster', cursive; /* Decorative font for the title */
+    font-size: 28px; /* Size of the title */
+    color: white; /* White text for contrast */
+    text-shadow: 1px 1px 2px black;
+}
+
+/* ==============================
+   BANNER IMAGE STYLING
+============================== */
+.banner {
+    width: 100%; /* Banner stretches across the page */
+    height: 285px; /* Fixed height for consistent layout */
+    background: url('./vivsun.png') no-repeat center center; /* Background image */
+    background-size: cover; /* Makes the image scale proportionally */
+    background-position: center; /* Center the image */
+    margin: 0;
+    position: relative; /* Ensures layering with other elements */
+}
+
+/* ==============================
+   FORM CONTAINER STYLING
+============================== */
+.container {
+    position: relative; /* Change from absolute to relative */
+    top: -235px; /* Remove the fixed top value */
+    left: auto; /* Center using margin instead */
+    transform: none; /* Remove the translate properties */
+    margin-top: -20px; /* Moves the container up by 20px */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px; /* Keep form size consistent */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ==============================
+   FORM FIELDS STYLING
+============================== */
+
+/* Label and input container for Start Location & Destination */
+.label-input-group-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Space between the fields */
+    width: 100%;
+}
+
+.label-input-group {
+    display: flex;
+    align-items: center;
+    background-color: white; /* White background for inputs */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 15px;
+    position: relative; /* Ensures icon placement inside inputs */
+    flex: 1; /* Makes each field flexibly fill space */
+}
+
+/* Start Location and Destination widths */
+.start-location-group,
+.destination-group {
+    width: 48%; /* Each takes up half the available space */
+}
+
+/* Input fields */
+.label-input-group input[type="text"] {
+    flex: 1;
+    padding: 8px; /* Padding for user comfort */
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black; /* Text color */
+}
+
+.label-input-group input::placeholder {
+    color: #aaa; /* Placeholder text color */
+}
+
+/* Icons inside input fields */
+.label-input-group .search-icon,
+.label-input-group .calendar-icon {
+    display: inline-block;
+    font-size: 20px; /* Icon size */
+    color: #ccc; /* Icon color */
+    position: absolute;
+    right: 10px; /* Position icon inside input */
+    cursor: pointer; /* Clickable icon */
+}
+
+/* ==============================
+   DATE FIELDS STYLING
+============================== */
+.date-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Space between date fields */
+    width: 100%;
+}
+
+.date-group {
+    width: 48%; /* Each date field takes up half the space */
+    position: relative;
+}
+
+.date-group input[type="text"] {
+    width: calc(100% - 40px); /* Adjust for icon spacing */
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+/* ==============================
+   TRAVELLERS SECTION STYLING
+============================== */
+.travellers-group {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Push all children to the right */
+    width: 100%;
+    margin-bottom: 15px;
+    gap: 10px; /* Add space between the travellers box and the button */
+}
+
+.travellers {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Compact padding */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: black; /* Text color */
+    margin-bottom: 15px;
+    width: 30%; /* Compact width for the field */
+}
+
+.travellers label {
+    color: black; /* Label text color */
+    margin-right: 10px; /* Space between label and field */
+    min-width: 70px; /* Minimum width for consistent alignment */
+}
+
+.travellers select {
+    flex: 1;
+    padding: 10px; /* Compact padding */
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black; /* Text color for dropdown */
+}
+
+/* ==============================
+   SEARCH BUTTON STYLING
+============================== */
+/* Search Button */
+.search-button {
+    flex: none; /* Prevent the button from shrinking */
+    width: 100%; /* Set the button to fill available space */
+    max-width: 300px; /* Adjust this to make it longer */
+    padding: 12px 20px; /* Adjust padding for button height and width */
+    background-color: #9F4B5F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #9f4b5f8f;
+}
+
+/*Based on Reccomendation*/
+.results-tag {
+    font-family: 'Lobster', cursive; /* Apply Great Vibes font */
+    text-align: center; /* Center the text */
+    margin-top: -190px; /* Shift it up by 50px (adjust as needed) */
+    color: #9F4B5F;
+    font-size: 24px; /* Adjust font size as needed */
+    z-index: 2; /* Optional: ensures it's above other elements */
+}
+
+.main-box {
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order of child elements */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+    max-width: 700px;
+}
+
+.content-section {
+    flex: 2;
+    padding: 20px;
+}
+
+.content-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #b24579; /* Match your branding color */
+}
+
+.content-section p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #333;
+}
+
+.content-section p strong {
+    font-weight: bold;
+}
+
+.image-section {
+    flex: 1;
+    position: relative;
+    display: flex;          /* Ensure the image is centered within the container */
+    justify-content: center; /* Horizontally center the image */
+    align-items: flex-start; /* Align the image to the top (you can adjust this) */
+    overflow: hidden; /* Prevent overflow of the image */
+}
+
+.image-section img {
+    transform: scale(1.8);  /* Scale the image by 10% to make it bigger */
+    object-fit: cover;
+    object-position: center top;  /* Center the image horizontally, and adjust vertical alignment */
+    margin-top: 40px;  /* Add some margin to drop the image down */
+}
+
+.suggestions {
+    font-family: 'Lobster', cursive; /* Apply lobster font */
+    text-align: center; /* Center the text */
+    margin-top: 40px; /* Shift it up by 50px (adjust as needed) */
+    color: #000000;
+    font-size: 15px; /* Adjust font size as needed */
+}
+
+.other-suggestions {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically if height is constrained */
+    text-align: center;     /* Aligns text in the center */
+    margin-top: 5px;       /* Adds space above the list */
+}
+
+.other-suggestions ul {
+    list-style-position: inside; /* Ensures bullets align with text */
+    padding: 0;                 /* Removes default padding from the list */
+    margin: 0;                  /* Removes default margin */
+}
+
+.other-suggestions li {
+    font-size: 16px;  /* Adjusts font size for better readability */
+    margin: 8px 0;    /* Adds spacing between items */
+}
+
+.location-option {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: inherit;
+    text-align: left;
+}
+
+.location-option:hover {
+    text-decoration: underline;
+}
